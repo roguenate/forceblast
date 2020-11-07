@@ -1,0 +1,114 @@
+
+<h1>Enter New Figure</h1>
+
+<%= form_with scope: :element, url: elements_path, local: true do |form| %>
+
+	<p>
+		<%= form.text_field(:element_type, value:"figure") %>
+Element Type<br>
+	</p>
+
+	<p>
+		<%= form.text_field :set_name, value:"BWM" %>
+Set Name
+		<%= form.text_field :set_number %>
+Set Number
+		<%= form.text_field :point_cost %>
+Point Cost<br>
+	</p>
+
+	<p>
+		<%= form.text_field :figure_name %>
+Name<%= form.text_field :real_name %>
+Real Name<%= form.text_field :rarity %>
+Rarity<%= form.text_field :unique, value:false %>
+Unique<br>
+	</p>
+
+	<p>
+<%= form.text_field :speed_symbol, value:"foot" %>
+Speed Symbol
+<%= form.text_field :attack_symbol, value:"fist" %>
+Attack Symbol 
+<%= form.text_field :defense_symbol, value:"shield" %>
+Defense Symbol
+<%= form.text_field :damage_symbol, value:"star" %>
+Damage Symbol<br>
+	</p>
+
+	<p>
+		<%= form.text_field :team_ability %>
+Team Abilities <%= form.text_field :keywords %>
+Keywords <br>
+	</p>
+
+	<p>
+<%= form.text_field :range %>
+Range
+<%= form.text_field :targets, value:1 %>
+Targets
+<%= form.text_field :improved_targeting %>
+Improved Targeting 
+<%= form.text_field :improved_movement %>
+Improved Movement <br>
+	</p>
+
+	<p>
+<%= form.text_field :traited_powers %>
+Traited Powers 
+<%= form.text_field :trait_text %>
+Trait Text <br>
+	</p>
+
+	<p>
+		<%= form.text_field :movement_special_powers %>
+Movement Special Powers<%= form.text_field :movement_special_text %>
+Movement Special Text<br>
+	</p>
+
+	<p>
+		<%= form.text_field :attack_special_powers %>
+Attack Special Powers<%= form.text_field :attack_special_text %>
+Attack Special Text<br>
+	</p>
+
+	<p>
+		<%= form.text_field :defense_special_powers %>
+Defense Special Powers<%= form.text_field :defense_special_text %>
+Defense Special Text<br>
+	</p>
+
+	<p>
+		<%= form.text_field :damage_special_powers %>
+Damage Special Powers<%= form.text_field :damage_special_text %>
+Damage Special Text<br>
+	</p>
+
+  <p>
+Movement Values
+    <%= form.text_area(:click_1_movement, size:"5") %><%= form.text_area(:click_2_movement, size:"5") %><%= form.text_area(:click_3_movement, size:"5") %><%= form.text_area(:click_4_movement, size:"5") %><%= form.text_area(:click_5_movement, size:"5") %><%= form.text_area(:click_6_movement, size:"5") %><%= form.text_area(:click_7_movement, size:"5") %><%= form.text_area(:click_8_movement, size:"5") %><%= form.text_area(:click_9_movement, size:"5") %><%= form.text_area(:click_10_movement, size:"5") %><%= form.text_area(:click_11_movement, size:"5") %><%= form.text_area(:click_12_movement, size:"5") %>
+  </p>
+
+  <p>
+Attack Values
+    <%= form.text_area(:click_1_attack, size:"5") %><%= form.text_area(:click_2_attack, size:"5") %><%= form.text_area(:click_3_attack, size:"5") %><%= form.text_area(:click_4_attack, size:"5") %><%= form.text_area(:click_5_attack, size:"5") %><%= form.text_area(:click_6_attack, size:"5") %><%= form.text_area(:click_7_attack, size:"5") %><%= form.text_area(:click_8_attack, size:"5") %><%= form.text_area(:click_9_attack, size:"5") %><%= form.text_area(:click_10_attack, size:"5") %><%= form.text_area(:click_11_attack, size:"5") %><%= form.text_area(:click_12_attack, size:"5") %>
+  </p>
+
+  <p>
+Defense Values
+	<%= form.text_area(:click_1_defense, size:"5") %><%= form.text_area(:click_2_defense, size:"5") %><%= form.text_area(:click_3_defense, size:"5") %><%= form.text_area(:click_4_defense, size:"5") %><%= form.text_area(:click_5_defense, size:"5") %><%= form.text_area(:click_6_defense, size:"5") %><%= form.text_area(:click_7_defense, size:"5") %><%= form.text_area(:click_8_defense, size:"5") %><%= form.text_area(:click_9_defense, size:"5") %><%= form.text_area(:click_10_defense, size:"5") %><%= form.text_area(:click_11_defense, size:"5") %><%= form.text_area(:click_12_defense, size:"5") %>
+  </p>
+
+  <p>
+Damage Values
+	<%= form.text_area(:click_1_damage, size:"5") %><%= form.text_area(:click_2_damage, size:"5") %><%= form.text_area(:click_3_damage, size:"5") %><%= form.text_area(:click_4_damage, size:"5") %><%= form.text_area(:click_5_damage, size:"5") %><%= form.text_area(:click_6_damage, size:"5") %><%= form.text_area(:click_7_damage, size:"5") %><%= form.text_area(:click_8_damage, size:"5") %><%= form.text_area(:click_9_damage, size:"5") %><%= form.text_area(:click_10_damage, size:"5") %><%= form.text_area(:click_11_damage, size:"5") %><%= form.text_area(:click_12_damage, size:"5") %>
+  </p>
+
+  <p>
+ Powers Per Click
+ 	<%= form.text_area(:click_1_powers, size:"5") %><%= form.text_area(:click_2_powers, size:"5") %><%= form.text_area(:click_3_powers, size:"5") %><%= form.text_area(:click_4_powers, size:"5") %><%= form.text_area(:click_5_powers, size:"5") %><%= form.text_area(:click_6_powers, size:"5") %><%= form.text_area(:click_7_powers, size:"5") %><%= form.text_area(:click_8_powers, size:"5") %><%= form.text_area(:click_9_powers, size:"5") %><%= form.text_area(:click_10_powers, size:"5") %><%= form.text_area(:click_11_powers, size:"5") %><%= form.text_area(:click_12_powers, size:"5") %>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

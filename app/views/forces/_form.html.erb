@@ -1,0 +1,65 @@
+<%= form_with(model: force, local: true) do |form| %>
+  <% if force.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(force.errors.count, "error") %> prohibited this force from being saved:</h2>
+
+      <ul>
+        <% force.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :main_force_figures %>
+    <%= form.text_field :main_force_figures %>
+  </div>
+
+  <div class="field">
+    <%= form.label :main_force_objects %>
+    <%= form.text_field :main_force_objects %>
+  </div>
+
+  <div class="field">
+    <%= form.label :main_force_maps %>
+    <%= form.text_field :main_force_maps %>
+  </div>
+
+  <div class="field">
+    <%= form.label :main_force_map_bonus %>
+    <%= form.text_field :main_force_map_bonus %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sideline_elements %>
+    <%= form.text_field :sideline_elements %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hold_elements %>
+    <%= form.text_field :hold_elements %>
+  </div>
+
+  <div class="field">
+    <%= form.label :build_pts %>
+    <%= form.text_field :build_pts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_pts %>
+    <%= form.text_field :total_pts %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+
+

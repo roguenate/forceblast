@@ -1,0 +1,1404 @@
+<%= form_with(model: element, local: true) do |form| %>
+  <% if element.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(element.errors.count, "error") %> prohibited this element from being saved:</h2>
+
+      <ul>
+        <% element.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :element_type %>
+    <%= form.text_field :element_type %>
+    <%= form.label :set_name %>
+    <%= form.text_field :set_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :set_name %>
+    <%= form.text_field :set_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :set_number %>
+    <%= form.number_field :set_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :figure_name %>
+    <%= form.text_field :figure_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :real_name %>
+    <%= form.text_field :real_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rarity %>
+    <%= form.text_field :rarity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :unique %>
+    <%= form.check_box :unique %>
+  </div>
+
+  <div class="field">
+    <%= form.label :spd_symbol %>
+    <%= form.text_field :spd_symbol %>
+  </div>
+
+  <div class="field">
+    <%= form.label :att_symbol %>
+    <%= form.text_field :att_symbol %>
+  </div>
+
+  <div class="field">
+    <%= form.label :def_symbol %>
+    <%= form.text_field :def_symbol %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dam_symbol %>
+    <%= form.text_field :dam_symbol %>
+  </div>
+
+  <div class="field">
+    <%= form.label :team_ability %>
+    <%= form.text_field :team_ability %>
+  </div>
+
+  <div class="field">
+    <%= form.label :range %>
+    <%= form.number_field :range %>
+  </div>
+
+  <div class="field">
+    <%= form.label :targets %>
+    <%= form.number_field :targets %>
+  </div>
+
+  <div class="field">
+    <%= form.label :starting_click_number %>
+    <%= form.number_field :starting_click_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :starting_click_rank %>
+    <%= form.number_field :starting_click_rank %>
+  </div>
+
+  <div class="field">
+    <%= form.label :keywords %>
+    <%= form.text_area :keywords %>
+  </div>
+
+  <div class="field">
+    <%= form.label :improved_targeting %>
+    <%= form.text_area :improved_targeting %>
+  </div>
+
+  <div class="field">
+    <%= form.label :improved_movement %>
+    <%= form.text_area :improved_movement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :traited_powers %>
+    <%= form.text_area :traited_powers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :trait_text %>
+    <%= form.text_area :trait_text %>
+  </div>
+
+  <div class="field">
+    <%= form.label :movement_special_powers %>
+    <%= form.text_area :movement_special_powers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :point_cost %>
+    <%= form.number_field :point_cost %>
+  </div>
+
+  <div class="field">
+    <%= form.label :attack_special_powers %>
+    <%= form.text_area :attack_special_powers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :defense_special_powers %>
+    <%= form.text_area :defense_special_powers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :damage_special_powers %>
+    <%= form.text_area :damage_special_powers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :movement_special_text %>
+    <%= form.text_area :movement_special_text %>
+  </div>
+
+  <div class="field">
+    <%= form.label :attack_special_text %>
+    <%= form.text_area :attack_special_text %>
+  </div>
+
+  <div class="field">
+    <%= form.label :defense_special_text %>
+    <%= form.text_area :defense_special_text %>
+  </div>
+
+  <div class="field">
+    <%= form.label :damage_special_text %>
+    <%= form.text_area :damage_special_text %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_1_powers %>
+    <%= form.text_area :click_1_powers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_2_powers %>
+    <%= form.text_area :click_2_powers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_3_powers %>
+    <%= form.text_area :click_3_powers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_4_powers %>
+    <%= form.text_area :click_4_powers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_5_powers %>
+    <%= form.text_area :click_5_powers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_6_powers %>
+    <%= form.text_area :click_6_powers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_7_powers %>
+    <%= form.text_area :click_7_powers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_8_powers %>
+    <%= form.text_area :click_8_powers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_9_powers %>
+    <%= form.text_area :click_9_powers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_10_powers %>
+    <%= form.text_area :click_10_powers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_11_powers %>
+    <%= form.text_area :click_11_powers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_12_powers %>
+    <%= form.text_area :click_12_powers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_13_powers %>
+    <%= form.text_area :click_13_powers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_14_powers %>
+    <%= form.text_area :click_14_powers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_15_powers %>
+    <%= form.text_area :click_15_powers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_16_powers %>
+    <%= form.text_area :click_16_powers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_17_powers %>
+    <%= form.text_area :click_17_powers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_18_powers %>
+    <%= form.text_area :click_18_powers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_19_powers %>
+    <%= form.text_area :click_19_powers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_20_powers %>
+    <%= form.text_area :click_20_powers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_21_powers %>
+    <%= form.text_area :click_21_powers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_22_powers %>
+    <%= form.text_area :click_22_powers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_23_powers %>
+    <%= form.text_area :click_23_powers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_24_powers %>
+    <%= form.text_area :click_24_powers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_25_powers %>
+    <%= form.text_area :click_25_powers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_1_movement %>
+    <%= form.number_field :click_1_movement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_2_movement %>
+    <%= form.number_field :click_2_movement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_3_movement %>
+    <%= form.number_field :click_3_movement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_4_movement %>
+    <%= form.number_field :click_4_movement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_5_movement %>
+    <%= form.number_field :click_5_movement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_6_movement %>
+    <%= form.number_field :click_6_movement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_7_movement %>
+    <%= form.number_field :click_7_movement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_8_movement %>
+    <%= form.number_field :click_8_movement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_9_movement %>
+    <%= form.number_field :click_9_movement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_10_movement %>
+    <%= form.number_field :click_10_movement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_11_movement %>
+    <%= form.number_field :click_11_movement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_12_movement %>
+    <%= form.number_field :click_12_movement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_13_movement %>
+    <%= form.number_field :click_13_movement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_14_movement %>
+    <%= form.number_field :click_14_movement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_15_movement %>
+    <%= form.number_field :click_15_movement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_16_movement %>
+    <%= form.number_field :click_16_movement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_17_movement %>
+    <%= form.number_field :click_17_movement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_18_movement %>
+    <%= form.number_field :click_18_movement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_19_movement %>
+    <%= form.number_field :click_19_movement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_20_movement %>
+    <%= form.number_field :click_20_movement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_21_movement %>
+    <%= form.number_field :click_21_movement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_22_movement %>
+    <%= form.number_field :click_22_movement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_23_movement %>
+    <%= form.number_field :click_23_movement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_24_movement %>
+    <%= form.number_field :click_24_movement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_25_movement %>
+    <%= form.number_field :click_25_movement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_1_attack %>
+    <%= form.number_field :click_1_attack %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_2_attack %>
+    <%= form.number_field :click_2_attack %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_3_attack %>
+    <%= form.number_field :click_3_attack %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_4_attack %>
+    <%= form.number_field :click_4_attack %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_5_attack %>
+    <%= form.number_field :click_5_attack %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_6_attack %>
+    <%= form.number_field :click_6_attack %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_7_attack %>
+    <%= form.number_field :click_7_attack %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_8_attack %>
+    <%= form.number_field :click_8_attack %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_9_attack %>
+    <%= form.number_field :click_9_attack %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_10_attack %>
+    <%= form.number_field :click_10_attack %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_11_attack %>
+    <%= form.number_field :click_11_attack %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_12_attack %>
+    <%= form.number_field :click_12_attack %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_13_attack %>
+    <%= form.number_field :click_13_attack %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_14_attack %>
+    <%= form.number_field :click_14_attack %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_15_attack %>
+    <%= form.number_field :click_15_attack %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_16_attack %>
+    <%= form.number_field :click_16_attack %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_17_attack %>
+    <%= form.number_field :click_17_attack %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_18_attack %>
+    <%= form.number_field :click_18_attack %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_19_attack %>
+    <%= form.number_field :click_19_attack %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_20_attack %>
+    <%= form.number_field :click_20_attack %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_21_attack %>
+    <%= form.number_field :click_21_attack %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_22_attack %>
+    <%= form.number_field :click_22_attack %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_23_attack %>
+    <%= form.number_field :click_23_attack %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_24_attack %>
+    <%= form.number_field :click_24_attack %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_25_attack %>
+    <%= form.number_field :click_25_attack %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_1_defense %>
+    <%= form.number_field :click_1_defense %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_2_defense %>
+    <%= form.number_field :click_2_defense %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_3_defense %>
+    <%= form.number_field :click_3_defense %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_4_defense %>
+    <%= form.number_field :click_4_defense %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_5_defense %>
+    <%= form.number_field :click_5_defense %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_6_defense %>
+    <%= form.number_field :click_6_defense %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_7_defense %>
+    <%= form.number_field :click_7_defense %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_8_defense %>
+    <%= form.number_field :click_8_defense %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_9_defense %>
+    <%= form.number_field :click_9_defense %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_10_defense %>
+    <%= form.number_field :click_10_defense %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_11_defense %>
+    <%= form.number_field :click_11_defense %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_12_defense %>
+    <%= form.number_field :click_12_defense %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_13_defense %>
+    <%= form.number_field :click_13_defense %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_14_defense %>
+    <%= form.number_field :click_14_defense %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_15_defense %>
+    <%= form.number_field :click_15_defense %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_16_defense %>
+    <%= form.number_field :click_16_defense %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_17_defense %>
+    <%= form.number_field :click_17_defense %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_18_defense %>
+    <%= form.number_field :click_18_defense %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_19_defense %>
+    <%= form.number_field :click_19_defense %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_20_defense %>
+    <%= form.number_field :click_20_defense %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_21_defense %>
+    <%= form.number_field :click_21_defense %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_22_defense %>
+    <%= form.number_field :click_22_defense %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_23_defense %>
+    <%= form.number_field :click_23_defense %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_24_defense %>
+    <%= form.number_field :click_24_defense %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_25_defense %>
+    <%= form.number_field :click_25_defense %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_1_damage %>
+    <%= form.number_field :click_1_damage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_2_damage %>
+    <%= form.number_field :click_2_damage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_3_damage %>
+    <%= form.number_field :click_3_damage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_4_damage %>
+    <%= form.number_field :click_4_damage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_5_damage %>
+    <%= form.number_field :click_5_damage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_6_damage %>
+    <%= form.number_field :click_6_damage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_7_damage %>
+    <%= form.number_field :click_7_damage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_8_damage %>
+    <%= form.number_field :click_8_damage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_9_damage %>
+    <%= form.number_field :click_9_damage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_10_damage %>
+    <%= form.number_field :click_10_damage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_11_damage %>
+    <%= form.number_field :click_11_damage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_12_damage %>
+    <%= form.number_field :click_12_damage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_13_damage %>
+    <%= form.number_field :click_13_damage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_14_damage %>
+    <%= form.number_field :click_14_damage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_15_damage %>
+    <%= form.number_field :click_15_damage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_16_damage %>
+    <%= form.number_field :click_16_damage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_17_damage %>
+    <%= form.number_field :click_17_damage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_18_damage %>
+    <%= form.number_field :click_18_damage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_19_damage %>
+    <%= form.number_field :click_19_damage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_20_damage %>
+    <%= form.number_field :click_20_damage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_21_damage %>
+    <%= form.number_field :click_21_damage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_22_damage %>
+    <%= form.number_field :click_22_damage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_23_damage %>
+    <%= form.number_field :click_23_damage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_24_damage %>
+    <%= form.number_field :click_24_damage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_25_damage %>
+    <%= form.number_field :click_25_damage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :all_text %>
+    <%= form.text_area :all_text %>
+  </div>
+
+  <div class="field">
+    <%= form.label :figure_tag %>
+    <%= form.text_area :figure_tag %>
+  </div>
+
+  <div class="field">
+    <%= form.label :click_1_2_powers %>
+    <%= form.check_box :click_1_2_powers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_ee_on_1_or_2 %>
+    <%= form.check_box :has_ee_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_inc_on_1_or_2 %>
+    <%= form.check_box :has_inc_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_psy_on_1_or_2 %>
+    <%= form.check_box :has_psy_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_poi_on_1_or_2 %>
+    <%= form.check_box :has_poi_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_ps_on_1_or_2 %>
+    <%= form.check_box :has_ps_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_pw_on_1_or_2 %>
+    <%= form.check_box :has_pw_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_qua_on_1_or_2 %>
+    <%= form.check_box :has_qua_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_rev_on_1_or_2 %>
+    <%= form.check_box :has_rev_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_se_on_1_or_2 %>
+    <%= form.check_box :has_se_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_sla_on_1_or_2 %>
+    <%= form.check_box :has_sla_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_smo_on_1_or_2 %>
+    <%= form.check_box :has_smo_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_sstr_on_1_or_2 %>
+    <%= form.check_box :has_sstr_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_stu_on_1_or_2 %>
+    <%= form.check_box :has_stu_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_sub_on_1_or_2 %>
+    <%= form.check_box :has_sub_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_tk_on_1_or_2 %>
+    <%= form.check_box :has_tk_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_bf_on_1_or_2 %>
+    <%= form.check_box :has_bf_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_cce_on_1_or_2 %>
+    <%= form.check_box :has_cce_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_emp_on_1_or_2 %>
+    <%= form.check_box :has_emp_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_enh_on_1_or_2 %>
+    <%= form.check_box :has_enh_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_ew_on_1_or_2 %>
+    <%= form.check_box :has_ew_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_ldr_on_1_or_2 %>
+    <%= form.check_box :has_ldr_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_ow_on_1_or_2 %>
+    <%= form.check_box :has_ow_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_pc_on_1_or_2 %>
+    <%= form.check_box :has_pc_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_ppx_on_1_or_2 %>
+    <%= form.check_box :has_ppx_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_rce_on_1_or_2 %>
+    <%= form.check_box :has_rce_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_sc_on_1_or_2 %>
+    <%= form.check_box :has_sc_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_sup_on_1_or_2 %>
+    <%= form.check_box :has_sup_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_bar_on_1_or_2 %>
+    <%= form.check_box :has_bar_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_cr_on_1_or_2 %>
+    <%= form.check_box :has_cr_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_def_on_1_or_2 %>
+    <%= form.check_box :has_def_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_esd_on_1_or_2 %>
+    <%= form.check_box :has_esd_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_imp_on_1_or_2 %>
+    <%= form.check_box :has_imp_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_invin_on_1_or_2 %>
+    <%= form.check_box :has_invin_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_invul_on_1_or_2 %>
+    <%= form.check_box :has_invul_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_mmd_on_1_or_2 %>
+    <%= form.check_box :has_mmd_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_reg_on_1_or_2 %>
+    <%= form.check_box :has_reg_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_ssen_on_1_or_2 %>
+    <%= form.check_box :has_ssen_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_tgh_on_1_or_2 %>
+    <%= form.check_box :has_tgh_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_wpw_on_1_or_2 %>
+    <%= form.check_box :has_wpw_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_chg_on_1_or_2 %>
+    <%= form.check_box :has_chg_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_eb_on_1_or_2 %>
+    <%= form.check_box :has_eb_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_fb_on_1_or_2 %>
+    <%= form.check_box :has_fb_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_flu_on_1_or_2 %>
+    <%= form.check_box :has_flu_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_fly_on_1_or_2 %>
+    <%= form.check_box :has_fly_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_hss_on_1_or_2 %>
+    <%= form.check_box :has_hss_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_lc_on_1_or_2 %>
+    <%= form.check_box :has_lc_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_ls_on_1_or_2 %>
+    <%= form.check_box :has_ls_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_mc_on_1_or_2 %>
+    <%= form.check_box :has_mc_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_nim_on_1_or_2 %>
+    <%= form.check_box :has_nim_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_pha_on_1_or_2 %>
+    <%= form.check_box :has_pha_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_pla_on_1_or_2 %>
+    <%= form.check_box :has_pla_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_rs_on_1_or_2 %>
+    <%= form.check_box :has_rs_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_sli_on_1_or_2 %>
+    <%= form.check_box :has_sli_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_ss_on_1_or_2 %>
+    <%= form.check_box :has_ss_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_sth_on_1_or_2 %>
+    <%= form.check_box :has_sth_on_1_or_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_bcf_on_dial %>
+    <%= form.check_box :has_bcf_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_ee_on_dial %>
+    <%= form.check_box :has_ee_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_inc_on_dial %>
+    <%= form.check_box :has_inc_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_psy_on_dial %>
+    <%= form.check_box :has_psy_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_poi_on_dial %>
+    <%= form.check_box :has_poi_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_ps_on_dial %>
+    <%= form.check_box :has_ps_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_pw_on_dial %>
+    <%= form.check_box :has_pw_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_qua_on_dial %>
+    <%= form.check_box :has_qua_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_rev_on_dial %>
+    <%= form.check_box :has_rev_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_se_on_dial %>
+    <%= form.check_box :has_se_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_sla_on_dial %>
+    <%= form.check_box :has_sla_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_smo_on_dial %>
+    <%= form.check_box :has_smo_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_sstr_on_dial %>
+    <%= form.check_box :has_sstr_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_stu_on_dial %>
+    <%= form.check_box :has_stu_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_sub_on_dial %>
+    <%= form.check_box :has_sub_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_tk_on_dial %>
+    <%= form.check_box :has_tk_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_bf_on_dial %>
+    <%= form.check_box :has_bf_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_cce_on_dial %>
+    <%= form.check_box :has_cce_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_emp_on_dial %>
+    <%= form.check_box :has_emp_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_enh_on_dial %>
+    <%= form.check_box :has_enh_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_ew_on_dial %>
+    <%= form.check_box :has_ew_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_ldr_on_dial %>
+    <%= form.check_box :has_ldr_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_ow_on_dial %>
+    <%= form.check_box :has_ow_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_pc_on_dial %>
+    <%= form.check_box :has_pc_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_ppx_on_dial %>
+    <%= form.check_box :has_ppx_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_rce_on_dial %>
+    <%= form.check_box :has_rce_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_sc_on_dial %>
+    <%= form.check_box :has_sc_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_sup_on_dial %>
+    <%= form.check_box :has_sup_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_bar_on_dial %>
+    <%= form.check_box :has_bar_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_cr_on_dial %>
+    <%= form.check_box :has_cr_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_def_on_dial %>
+    <%= form.check_box :has_def_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_esd_on_dial %>
+    <%= form.check_box :has_esd_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_imp_on_dial %>
+    <%= form.check_box :has_imp_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_invin_on_dial %>
+    <%= form.check_box :has_invin_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_invul_on_dial %>
+    <%= form.check_box :has_invul_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_mmd_on_dial %>
+    <%= form.check_box :has_mmd_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_reg_on_dial %>
+    <%= form.check_box :has_reg_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_ssen_on_dial %>
+    <%= form.check_box :has_ssen_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_tgh_on_dial %>
+    <%= form.check_box :has_tgh_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_wpw_on_dial %>
+    <%= form.check_box :has_wpw_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_chg_on_dial %>
+    <%= form.check_box :has_chg_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_eb_on_dial %>
+    <%= form.check_box :has_eb_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_fb_on_dial %>
+    <%= form.check_box :has_fb_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_flu_on_dial %>
+    <%= form.check_box :has_flu_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_fly_on_dial %>
+    <%= form.check_box :has_fly_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_hss_on_dial %>
+    <%= form.check_box :has_hss_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_lc_on_dial %>
+    <%= form.check_box :has_lc_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_ls_on_dial %>
+    <%= form.check_box :has_ls_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_mc_on_dial %>
+    <%= form.check_box :has_mc_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_nim_on_dial %>
+    <%= form.check_box :has_nim_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_pha_on_dial %>
+    <%= form.check_box :has_pha_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_pla_on_dial %>
+    <%= form.check_box :has_pla_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_rs_on_dial %>
+    <%= form.check_box :has_rs_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_sli_on_dial %>
+    <%= form.check_box :has_sli_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_ss_on_dial %>
+    <%= form.check_box :has_ss_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_sth_on_dial %>
+    <%= form.check_box :has_sth_on_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :max_att_1_2 %>
+    <%= form.number_field :max_att_1_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :max_att_dial %>
+    <%= form.number_field :max_att_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :max_spd_1_2 %>
+    <%= form.number_field :max_spd_1_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :max_spd_dial %>
+    <%= form.number_field :max_spd_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :max_def_1_2 %>
+    <%= form.number_field :max_def_1_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :max_def_dial %>
+    <%= form.number_field :max_def_dial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :max_dam_1_2 %>
+    <%= form.number_field :max_dam_1_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :max_dam_dial %>
+    <%= form.number_field :max_dam_dial %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

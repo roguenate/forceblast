@@ -1,0 +1,6 @@
+<%= display_query_sql(@elements) %>
+<%= tag.h2 display_results_header(@elements.size) %>
+<%= tag.table do %>
+  <%= tag.thead display_sort_column_headers(@ransack), escape_attributes: false %>
+  <%= tag.tbody display_search_results(@elements), escape_attributes: false %>
+<% end %>

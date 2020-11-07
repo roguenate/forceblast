@@ -1,0 +1,397 @@
+<p id="notice"><%= notice %></p>
+
+<h4>Elements</h4>
+
+<div class="column">
+  <div class="advanced-search hide form-container glassy-bg columns">
+    <a class="close-advanced-search fi-x"></a>
+  </div>
+</div>
+
+<div class="column">
+  <h5>
+    <a class="show-advanced-search">Advanced Search <span class="fi-plus"/></a>
+  </h5>
+</div>
+
+<% content_for :search do %>
+  <div class="large-8 small-9 columns">
+  <%= search_form_for @ransack do |f| %>
+    <%= f.text_field :all_text_cont, class: "radius-left expand", placeholder: "Contains" %>
+  </div>
+    <div class="large-4 small-3 columns">
+      <%= f.submit "Search", class: "radius-right button" %>
+    </div>
+  <% end %>
+<% end %>
+
+<h4>Advanced Search</h4>
+<%= search_form_for @ransack do |f| %>
+  <div class="large-5 small-4 columns">
+    <%= f.label :point_cost_eq, class: "movie-label" %>
+    <%= f.text_field :point_cost_eq, class: "radius", placeholder: "Exact Point Cost" %>
+  </div>
+  <div class="large-5 small-4 columns">
+    <%= f.label :point_cost_gteq, class: "movie-label" %>
+    <%= f.text_field :point_cost_gteq, class: "radius", placeholder: "Minumum Point Cost" %>
+  </div>
+  <h6 class="large-2 small-4 columns center"><span>And</span></h6>
+  <div class="large-5 small-4 columns">
+    <%= f.label :point_cost_lteq, class: "movie-label" %>
+    <%= f.text_field :point_cost_lteq, class: "radius", placeholder: "Maximum Point Cost" %>
+  </div>
+  <div class="column">
+    <%= f.submit "Search", class: " radius button" %>
+  </div>
+<% end %>
+
+<h4>Advanced Search</h4>
+<%= search_form_for @ransack do |f| %>
+  <%= f.condition_fields do |c| %>
+    <div class="large-4 small-4 columns">
+      <%= c.attribute_fields do |a| %>
+        <%= a.attribute_select nil, class: "radius" %>
+      <% end %>
+    </div>
+    <div class="large-4 small-4 columns">
+      <%= c.predicate_select Hash.new, class: "radius" %>
+    </div>
+    <div class="large-4 small-4 columns">
+      <%= c.value_fields do |v| %>
+        <%= v.text_field :value, class: "radius" %>
+      <% end %>
+    </div>
+  <% end %>
+  <h5>Sort</h5>
+  <div class="column">
+  <%= f.sort_fields do |s| %>
+    <%= s.sort_select Hash.new, class: "large-5 small-4 columns mrs radius" %>
+  <% end %>
+  </div>
+  <%= f.submit "Search", class: "radius button" %>
+<% end %>
+
+<% @elements.each do |element| %>
+  <div class="card mb-3">
+    <div class="card-body">
+      <div>
+        <%= element.set_name %><%= element.set_number %> <%= element.figure_name %> <%= element.point_cost %>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<%= link_to 'New Element', new_element_path %>
+
+<%= tag.h1 'Search Elements' %>
+<%= tag.header link_to_toggle_search_modes %>
+
+<%= search_form_for @ransack do |f| %>
+
+  <%= tag.fieldset do %>
+    <%= tag.legend 'Element' %>
+    <%= tag.ul do %>
+      <%= tag.li do %>
+        <%= f.label :all_text_cont %>
+        <%= f.text_field :all_text_cont %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <%= display_distinct_label_and_check_box %>
+  <%= f.submit class: 'btn btn--invert' %>
+<% end %>
+
+<%= render 'results' %>
+
+
+ <!--    <% @elements.each do |element| %>
+      <tr>
+        <td><%= element.element_type %></td>
+        <td><%= element.set_name %></td>
+        <td><%= element.set_number %></td>
+        <td><%= element.figure_name %></td>
+        <td><%= element.real_name %></td>
+        <td><%= element.rarity %></td>
+        <td><%= element.unique %></td>
+        <td><%= element.spd_symbol %></td>
+        <td><%= element.att_symbol %></td>
+        <td><%= element.def_symbol %></td>
+        <td><%= element.dam_symbol %></td>
+        <td><%= element.team_ability %></td>
+        <td><%= element.range %></td>
+        <td><%= element.targets %></td>
+        <td><%= element.starting_click_number %></td>
+        <td><%= element.starting_click_rank %></td>
+        <td><%= element.keywords %></td>
+        <td><%= element.improved_targeting %></td>
+        <td><%= element.improved_movement %></td>
+        <td><%= element.traited_powers %></td>
+        <td><%= element.trait_text %></td>
+        <td><%= element.movement_special_powers %></td>
+        <td><%= element.point_cost %></td>
+        <td><%= element.attack_special_powers %></td>
+        <td><%= element.defense_special_powers %></td>
+        <td><%= element.damage_special_powers %></td>
+        <td><%= element.movement_special_text %></td>
+        <td><%= element.attack_special_text %></td>
+        <td><%= element.defense_special_text %></td>
+        <td><%= element.damage_special_text %></td>
+        <td><%= element.click_1_powers %></td>
+        <td><%= element.click_2_powers %></td>
+        <td><%= element.click_3_powers %></td>
+        <td><%= element.click_4_powers %></td>
+        <td><%= element.click_5_powers %></td>
+        <td><%= element.click_6_powers %></td>
+        <td><%= element.click_7_powers %></td>
+        <td><%= element.click_8_powers %></td>
+        <td><%= element.click_9_powers %></td>
+        <td><%= element.click_10_powers %></td>
+        <td><%= element.click_11_powers %></td>
+        <td><%= element.click_12_powers %></td>
+        <td><%= element.click_13_powers %></td>
+        <td><%= element.click_14_powers %></td>
+        <td><%= element.click_15_powers %></td>
+        <td><%= element.click_16_powers %></td>
+        <td><%= element.click_17_powers %></td>
+        <td><%= element.click_18_powers %></td>
+        <td><%= element.click_19_powers %></td>
+        <td><%= element.click_20_powers %></td>
+        <td><%= element.click_21_powers %></td>
+        <td><%= element.click_22_powers %></td>
+        <td><%= element.click_23_powers %></td>
+        <td><%= element.click_24_powers %></td>
+        <td><%= element.click_25_powers %></td>
+        <td><%= element.click_1_movement %></td>
+        <td><%= element.click_2_movement %></td>
+        <td><%= element.click_3_movement %></td>
+        <td><%= element.click_4_movement %></td>
+        <td><%= element.click_5_movement %></td>
+        <td><%= element.click_6_movement %></td>
+        <td><%= element.click_7_movement %></td>
+        <td><%= element.click_8_movement %></td>
+        <td><%= element.click_9_movement %></td>
+        <td><%= element.click_10_movement %></td>
+        <td><%= element.click_11_movement %></td>
+        <td><%= element.click_12_movement %></td>
+        <td><%= element.click_13_movement %></td>
+        <td><%= element.click_14_movement %></td>
+        <td><%= element.click_15_movement %></td>
+        <td><%= element.click_16_movement %></td>
+        <td><%= element.click_17_movement %></td>
+        <td><%= element.click_18_movement %></td>
+        <td><%= element.click_19_movement %></td>
+        <td><%= element.click_20_movement %></td>
+        <td><%= element.click_21_movement %></td>
+        <td><%= element.click_22_movement %></td>
+        <td><%= element.click_23_movement %></td>
+        <td><%= element.click_24_movement %></td>
+        <td><%= element.click_25_movement %></td>
+        <td><%= element.click_1_attack %></td>
+        <td><%= element.click_2_attack %></td>
+        <td><%= element.click_3_attack %></td>
+        <td><%= element.click_4_attack %></td>
+        <td><%= element.click_5_attack %></td>
+        <td><%= element.click_6_attack %></td>
+        <td><%= element.click_7_attack %></td>
+        <td><%= element.click_8_attack %></td>
+        <td><%= element.click_9_attack %></td>
+        <td><%= element.click_10_attack %></td>
+        <td><%= element.click_11_attack %></td>
+        <td><%= element.click_12_attack %></td>
+        <td><%= element.click_13_attack %></td>
+        <td><%= element.click_14_attack %></td>
+        <td><%= element.click_15_attack %></td>
+        <td><%= element.click_16_attack %></td>
+        <td><%= element.click_17_attack %></td>
+        <td><%= element.click_18_attack %></td>
+        <td><%= element.click_19_attack %></td>
+        <td><%= element.click_20_attack %></td>
+        <td><%= element.click_21_attack %></td>
+        <td><%= element.click_22_attack %></td>
+        <td><%= element.click_23_attack %></td>
+        <td><%= element.click_24_attack %></td>
+        <td><%= element.click_25_attack %></td>
+        <td><%= element.click_1_defense %></td>
+        <td><%= element.click_2_defense %></td>
+        <td><%= element.click_3_defense %></td>
+        <td><%= element.click_4_defense %></td>
+        <td><%= element.click_5_defense %></td>
+        <td><%= element.click_6_defense %></td>
+        <td><%= element.click_7_defense %></td>
+        <td><%= element.click_8_defense %></td>
+        <td><%= element.click_9_defense %></td>
+        <td><%= element.click_10_defense %></td>
+        <td><%= element.click_11_defense %></td>
+        <td><%= element.click_12_defense %></td>
+        <td><%= element.click_13_defense %></td>
+        <td><%= element.click_14_defense %></td>
+        <td><%= element.click_15_defense %></td>
+        <td><%= element.click_16_defense %></td>
+        <td><%= element.click_17_defense %></td>
+        <td><%= element.click_18_defense %></td>
+        <td><%= element.click_19_defense %></td>
+        <td><%= element.click_20_defense %></td>
+        <td><%= element.click_21_defense %></td>
+        <td><%= element.click_22_defense %></td>
+        <td><%= element.click_23_defense %></td>
+        <td><%= element.click_24_defense %></td>
+        <td><%= element.click_25_defense %></td>
+        <td><%= element.click_1_damage %></td>
+        <td><%= element.click_2_damage %></td>
+        <td><%= element.click_3_damage %></td>
+        <td><%= element.click_4_damage %></td>
+        <td><%= element.click_5_damage %></td>
+        <td><%= element.click_6_damage %></td>
+        <td><%= element.click_7_damage %></td>
+        <td><%= element.click_8_damage %></td>
+        <td><%= element.click_9_damage %></td>
+        <td><%= element.click_10_damage %></td>
+        <td><%= element.click_11_damage %></td>
+        <td><%= element.click_12_damage %></td>
+        <td><%= element.click_13_damage %></td>
+        <td><%= element.click_14_damage %></td>
+        <td><%= element.click_15_damage %></td>
+        <td><%= element.click_16_damage %></td>
+        <td><%= element.click_17_damage %></td>
+        <td><%= element.click_18_damage %></td>
+        <td><%= element.click_19_damage %></td>
+        <td><%= element.click_20_damage %></td>
+        <td><%= element.click_21_damage %></td>
+        <td><%= element.click_22_damage %></td>
+        <td><%= element.click_23_damage %></td>
+        <td><%= element.click_24_damage %></td>
+        <td><%= element.click_25_damage %></td>
+        <td><%= element.all_text %></td>
+        <td><%= element.figure_tag %></td>
+        <td><%= element.click_1_2_powers %></td>
+        <td><%= element.has_ee_on_1_or_2 %></td>
+        <td><%= element.has_inc_on_1_or_2 %></td>
+        <td><%= element.has_psy_on_1_or_2 %></td>
+        <td><%= element.has_poi_on_1_or_2 %></td>
+        <td><%= element.has_ps_on_1_or_2 %></td>
+        <td><%= element.has_pw_on_1_or_2 %></td>
+        <td><%= element.has_qua_on_1_or_2 %></td>
+        <td><%= element.has_rev_on_1_or_2 %></td>
+        <td><%= element.has_se_on_1_or_2 %></td>
+        <td><%= element.has_sla_on_1_or_2 %></td>
+        <td><%= element.has_smo_on_1_or_2 %></td>
+        <td><%= element.has_sstr_on_1_or_2 %></td>
+        <td><%= element.has_stu_on_1_or_2 %></td>
+        <td><%= element.has_sub_on_1_or_2 %></td>
+        <td><%= element.has_tk_on_1_or_2 %></td>
+        <td><%= element.has_bf_on_1_or_2 %></td>
+        <td><%= element.has_cce_on_1_or_2 %></td>
+        <td><%= element.has_emp_on_1_or_2 %></td>
+        <td><%= element.has_enh_on_1_or_2 %></td>
+        <td><%= element.has_ew_on_1_or_2 %></td>
+        <td><%= element.has_ldr_on_1_or_2 %></td>
+        <td><%= element.has_ow_on_1_or_2 %></td>
+        <td><%= element.has_pc_on_1_or_2 %></td>
+        <td><%= element.has_ppx_on_1_or_2 %></td>
+        <td><%= element.has_rce_on_1_or_2 %></td>
+        <td><%= element.has_sc_on_1_or_2 %></td>
+        <td><%= element.has_sup_on_1_or_2 %></td>
+        <td><%= element.has_bar_on_1_or_2 %></td>
+        <td><%= element.has_cr_on_1_or_2 %></td>
+        <td><%= element.has_def_on_1_or_2 %></td>
+        <td><%= element.has_esd_on_1_or_2 %></td>
+        <td><%= element.has_imp_on_1_or_2 %></td>
+        <td><%= element.has_invin_on_1_or_2 %></td>
+        <td><%= element.has_invul_on_1_or_2 %></td>
+        <td><%= element.has_mmd_on_1_or_2 %></td>
+        <td><%= element.has_reg_on_1_or_2 %></td>
+        <td><%= element.has_ssen_on_1_or_2 %></td>
+        <td><%= element.has_tgh_on_1_or_2 %></td>
+        <td><%= element.has_wpw_on_1_or_2 %></td>
+        <td><%= element.has_chg_on_1_or_2 %></td>
+        <td><%= element.has_eb_on_1_or_2 %></td>
+        <td><%= element.has_fb_on_1_or_2 %></td>
+        <td><%= element.has_flu_on_1_or_2 %></td>
+        <td><%= element.has_fly_on_1_or_2 %></td>
+        <td><%= element.has_hss_on_1_or_2 %></td>
+        <td><%= element.has_lc_on_1_or_2 %></td>
+        <td><%= element.has_ls_on_1_or_2 %></td>
+        <td><%= element.has_mc_on_1_or_2 %></td>
+        <td><%= element.has_nim_on_1_or_2 %></td>
+        <td><%= element.has_pha_on_1_or_2 %></td>
+        <td><%= element.has_pla_on_1_or_2 %></td>
+        <td><%= element.has_rs_on_1_or_2 %></td>
+        <td><%= element.has_sli_on_1_or_2 %></td>
+        <td><%= element.has_ss_on_1_or_2 %></td>
+        <td><%= element.has_sth_on_1_or_2 %></td>
+        <td><%= element.has_bcf_on_dial %></td>
+        <td><%= element.has_ee_on_dial %></td>
+        <td><%= element.has_inc_on_dial %></td>
+        <td><%= element.has_psy_on_dial %></td>
+        <td><%= element.has_poi_on_dial %></td>
+        <td><%= element.has_ps_on_dial %></td>
+        <td><%= element.has_pw_on_dial %></td>
+        <td><%= element.has_qua_on_dial %></td>
+        <td><%= element.has_rev_on_dial %></td>
+        <td><%= element.has_se_on_dial %></td>
+        <td><%= element.has_sla_on_dial %></td>
+        <td><%= element.has_smo_on_dial %></td>
+        <td><%= element.has_sstr_on_dial %></td>
+        <td><%= element.has_stu_on_dial %></td>
+        <td><%= element.has_sub_on_dial %></td>
+        <td><%= element.has_tk_on_dial %></td>
+        <td><%= element.has_bf_on_dial %></td>
+        <td><%= element.has_cce_on_dial %></td>
+        <td><%= element.has_emp_on_dial %></td>
+        <td><%= element.has_enh_on_dial %></td>
+        <td><%= element.has_ew_on_dial %></td>
+        <td><%= element.has_ldr_on_dial %></td>
+        <td><%= element.has_ow_on_dial %></td>
+        <td><%= element.has_pc_on_dial %></td>
+        <td><%= element.has_ppx_on_dial %></td>
+        <td><%= element.has_rce_on_dial %></td>
+        <td><%= element.has_sc_on_dial %></td>
+        <td><%= element.has_sup_on_dial %></td>
+        <td><%= element.has_bar_on_dial %></td>
+        <td><%= element.has_cr_on_dial %></td>
+        <td><%= element.has_def_on_dial %></td>
+        <td><%= element.has_esd_on_dial %></td>
+        <td><%= element.has_imp_on_dial %></td>
+        <td><%= element.has_invin_on_dial %></td>
+        <td><%= element.has_invul_on_dial %></td>
+        <td><%= element.has_mmd_on_dial %></td>
+        <td><%= element.has_reg_on_dial %></td>
+        <td><%= element.has_ssen_on_dial %></td>
+        <td><%= element.has_tgh_on_dial %></td>
+        <td><%= element.has_wpw_on_dial %></td>
+        <td><%= element.has_chg_on_dial %></td>
+        <td><%= element.has_eb_on_dial %></td>
+        <td><%= element.has_fb_on_dial %></td>
+        <td><%= element.has_flu_on_dial %></td>
+        <td><%= element.has_fly_on_dial %></td>
+        <td><%= element.has_hss_on_dial %></td>
+        <td><%= element.has_lc_on_dial %></td>
+        <td><%= element.has_ls_on_dial %></td>
+        <td><%= element.has_mc_on_dial %></td>
+        <td><%= element.has_nim_on_dial %></td>
+        <td><%= element.has_pha_on_dial %></td>
+        <td><%= element.has_pla_on_dial %></td>
+        <td><%= element.has_rs_on_dial %></td>
+        <td><%= element.has_sli_on_dial %></td>
+        <td><%= element.has_ss_on_dial %></td>
+        <td><%= element.has_sth_on_dial %></td>
+        <td><%= element.max_att_1_2 %></td>
+        <td><%= element.max_att_dial %></td>
+        <td><%= element.max_spd_1_2 %></td>
+        <td><%= element.max_spd_dial %></td>
+        <td><%= element.max_def_1_2 %></td>
+        <td><%= element.max_def_dial %></td>
+        <td><%= element.max_dam_1_2 %></td>
+        <td><%= element.max_dam_dial %></td>
+        <td><%= link_to 'Show', element %></td>
+        <td><%= link_to 'Edit', edit_element_path(element) %></td>
+        <td><%= link_to 'Destroy', element, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br> -->
+
+

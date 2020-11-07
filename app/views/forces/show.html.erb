@@ -1,0 +1,31 @@
+<h4>Forces</h4>
+
+<p id="notice"><%= notice %></p>
+
+
+<div class="card mb-3">
+	<div class="card-body">
+		<div>
+			<h5><%= @force.title %> - <%= @force.total_pts %> Points</h5>
+			 by <%= current_user.email %><br>
+			 Main Force:
+			 <%= @force.main_force_figures %><br>
+			<%= link_to 'Edit', edit_force_path(@force.id), class: 'btn btn-dark ml-auto' %>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
